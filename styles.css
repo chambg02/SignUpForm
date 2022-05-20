@@ -1,3 +1,29 @@
+:root {
+    --header: 3rem;
+	--footer: 40px;
+	--main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+
 body {
-    background-color: aqua;
+    background-image: url(./Img/plane.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+form {
+    display: flex;
+   
+}
+
+#formContainer {
+
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+.formInput {
+    display:flex;
+    flex-direction: column;
 }
