@@ -1,7 +1,9 @@
 :root {
-    --header: 3rem;
-	--footer: 40px;
-	--main: calc(100vh - calc(var(--header) + var(--footer)));
+    --spaceLeft: 40vw;
+	--spaceRight: calc(100vw - var(--spaceLeft));
+    --formAbove: 30vh;
+    --formBelow: 30vh;
+    --formContainer: calc(100vh - var(--formAbove) - var(--formBelow));
 }
 
 body {
@@ -13,17 +15,55 @@ body {
 
 form {
     display: flex;
-   
+    align-items: stretch;
+}
+
+#aboveForm {
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 40px;
+    width: var(--spaceRight);
+    height: var(--formAbove);
 }
 
 #formContainer {
-
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: var(--formAbove);
+    padding: 40px;
+    width: var(--spaceRight);
+    height: var(--formContainer);
 }
 
-.formInput {
+#logoContainer {
+    background-color:aliceblue;
+    position: fixed;
+    left:0;
+    width: var(--spaceLeft);
+    bottom: calc(var(--formAbove) + var(--formContainer));
+}
+
+#belowForm {
+    background-color: white;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    width: var(--spaceRight);
+    height: var(--formAbove);
+}
+
+.formInputLeft, .formInputRight {
     display:flex;
     flex-direction: column;
+    padding-right: 60px;
+    margin-right: 60px;
+    padding-top: 10px;
+    height: 30%;
+    width: 90%;
 }
