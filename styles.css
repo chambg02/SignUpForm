@@ -1,8 +1,14 @@
+.inputField:focus {
+    border: blue;
+    border-style: solid;
+    background-color: lightgrey;
+}
+
 :root {
-    --spaceLeft: 40vw;
+    --spaceLeft: 45vw;
 	--spaceRight: calc(100vw - var(--spaceLeft));
-    --formAbove: 30vh;
-    --formBelow: 30vh;
+    --formAbove: 20vh;
+    --formBelow: 20vh;
     --formContainer: calc(100vh - var(--formAbove) - var(--formBelow));
 }
 
@@ -16,16 +22,21 @@ body {
 form {
     display: flex;
     align-items: stretch;
+    height: 80%;
 }
 
 #aboveForm {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: fixed;
     right: 0;
     top: 0;
     padding: 40px;
     width: var(--spaceRight);
     height: var(--formAbove);
+    
 }
 
 #formContainer {
@@ -64,11 +75,11 @@ form {
 .formInputLeft, .formInputRight {
     display:flex;
     flex-direction: column;
-    padding-right: 60px;
-    margin-right: 60px;
+    padding-right: 40px;
+    margin-right: 40px;
     padding-top: 10px;
     height: 30%;
-    width: 90%;
+    width: 70%;
 }
 
 .CFAlogo {
