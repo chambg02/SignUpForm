@@ -5,11 +5,12 @@
 }
 
 :root {
-    --spaceLeft: 45vw;
+    --spaceLeft: 40vw;
 	--spaceRight: calc(100vw - var(--spaceLeft));
-    --formAbove: 20vh;
-    --formBelow: 20vh;
+    --formAbove: 30vh;
+    --formBelow: 30vh;
     --formContainer: calc(100vh - var(--formAbove) - var(--formBelow));
+    --backgroundColor: rgba(230,230,230);
 }
 
 body {
@@ -17,57 +18,55 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-form {
+.form {
     display: flex;
-    align-items: stretch;
-    height: 80%;
+    align-items:stretch;
+    height: 90%;
 }
 
 #aboveForm {
-    background-color: white;
+    background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: fixed;
     right: 0;
     top: 0;
-    padding: 40px;
     width: var(--spaceRight);
     height: var(--formAbove);
-    
 }
 
 #formContainer {
-    background-color: grey;
+    background-color: rgba(200,200,200);
     display: flex;
     flex-direction: column;
     position: fixed;
     right: 0;
     top: var(--formAbove);
-    padding: 40px;
     width: var(--spaceRight);
     height: var(--formContainer);
+    box-shadow: 2px;
 }
 
 #logoContainer {
     display: flex;
-    background-color:aliceblue;
     position: fixed;
     left:0;
     width: var(--spaceLeft);
     bottom: calc(var(--formAbove) + var(--formContainer));
     justify-content: space-around;
-    opacity: 40%;
+    background: rgba(230,230,230,0.4);
 }
 
 #belowForm {
-    background-color: white;
+    background-color: var(--backgroundColor);
     position: fixed;
     right: 0;
     bottom: 0;
-    padding: 40px;
     width: var(--spaceRight);
     height: var(--formAbove);
 }
@@ -75,14 +74,36 @@ form {
 .formInputLeft, .formInputRight {
     display:flex;
     flex-direction: column;
-    padding-right: 40px;
-    margin-right: 40px;
-    padding-top: 10px;
     height: 30%;
-    width: 70%;
+    width: 80%;
+}
+
+.leftForm, .rightForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 40px;
 }
 
 .CFAlogo {
     height: calc(var(--formAbove)/2);
     opacity: 100%
+}
+
+.textGeneral {
+    margin: 40px;
+}
+
+.buttonContainer {
+    margin: 40px;
+    height: 20%;
+}
+
+.button {
+    height: 50px;
+    width: 300px;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: rgba(200,200,200);
 }
